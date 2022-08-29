@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Badyet.App (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Badyet.App (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
