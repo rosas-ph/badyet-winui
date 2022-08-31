@@ -15,11 +15,12 @@
             PaneDisplayMode="Top"
             IsBackEnabled="False"
             Loaded="NaviView_Loaded"
-            ItemInvoked="NaviView_ItemInvoked">
+            ItemInvoked="NaviView_ItemInvoked"
+            IsBackButtonVisible="Collapsed">
             <NavigationView.MenuItems>
                 <NavigationViewItemHeader 
-                    x:Name="MainPagesHeader" 
-                    Content="Badyet"/>
+                    Content="Badyet">
+                </NavigationViewItemHeader>
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame"/>
         </NavigationView>

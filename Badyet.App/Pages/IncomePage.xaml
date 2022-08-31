@@ -18,117 +18,113 @@
                 Margin="15,10"
                 MinWidth="600">
                 <StackPanel>
-                    
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition 
-                                Width="50*"/>
-                            <ColumnDefinition 
-                                Width="50*"/>
-                        </Grid.ColumnDefinitions>
+                    <StackPanel
+                        Margin="20,10,20,10"
+                        Orientation="Horizontal">
                         <TextBlock
-                            Grid.Column="0"
+                            Text="{x:Bind Path=incomeType}"
+                            FontSize="20"
+                            FontWeight="Thin"
+                            Margin="0,0,15,0"/>
+                        <TextBlock
+                            Text="{x:Bind Path=incomeName}"
+                            FontSize="20"
+                            FontWeight="Normal"/>
+                        <!--<StackPanel>
+                            <CommandBar 
+                                Background="Transparent" 
+                                DefaultLabelPosition="Right" 
+                                HorizontalAlignment="Right">
+                                <AppBarButton 
+                                    Icon="Edit" 
+                                    Label="Update"
+                                    Click="AppBarButton_Click">
+                                </AppBarButton>
+                            </CommandBar>
+                        </StackPanel>-->
+                    </StackPanel>
+                    
+                    <Grid
+                        Margin="20,0,20,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock
+                            Grid.Row="0"
                             Text="Basic Pay"
                             FontSize="20"
-                            FontWeight="Thin"
-                            VerticalAlignment="Center"
-                            Margin="20,0,0,0"/>
+                            FontWeight="Thin"/>
+
                         <StackPanel
-                            Grid.Column="1">
-                            <CommandBar 
-                                Background="Transparent" 
-                                DefaultLabelPosition="Right" 
-                                HorizontalAlignment="Right">
-                                <AppBarButton 
-                                    Icon="Edit" 
-                                    Label="Update"
-                                    Click="AppBarButton_Click">
-                                </AppBarButton>
-                            </CommandBar>
-                        </StackPanel>
-                    </Grid>
-                    <Grid
-                        Margin="20,0,20,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="20*"/>
-                            <ColumnDefinition Width="20*"/>
-                            <ColumnDefinition Width="15*"/>
-                        </Grid.ColumnDefinitions>
-                        <StackPanel
-                            Grid.Column="0">
+                            Grid.Column="0"
+                            Grid.Row="1">
                             <TextBlock
                                 Text="Monthly"
                                 FontSize="15"
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="0.00"
-                                FontSize="55"
-                                FontWeight="SemiBold"/>
+                                Text="{x:Bind Path=formattedBasicPay}"
+                                FontSize="35"
+                                FontWeight="SemiLight"/>
                         </StackPanel>
                         <StackPanel
-                            Grid.Column="1">
+                            Grid.Column="1"
+                            Grid.Row="1">
                             <TextBlock
                                 Text="Annual"
                                 FontSize="15"
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="0.00"
-                                FontSize="45"
-                                FontWeight="SemiBold"/>
+                                Text="{x:Bind Path=formattedAnnualPay}"
+                                FontSize="30"
+                                FontWeight="SemiLight"/>
                         </StackPanel>
                         <StackPanel
-                            Grid.Column="2">
+                            Grid.Column="2"
+                            Grid.Row="1">
                             <TextBlock
                                 Text="Daily"
                                 FontSize="15"
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="0.00"
-                                FontSize="40"
-                                FontWeight="SemiBold"/>
+                                Text="{x:Bind Path=formattedDailyPay}"
+                                FontSize="25"
+                                FontWeight="SemiLight"/>
                         </StackPanel>
                     </Grid>
-                    
-                    <Grid>
+                                    
+                    <Grid
+                        Margin="20,0,20,20">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition 
-                                Width="50*"/>
-                            <ColumnDefinition 
-                                Width="50*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
                         <TextBlock
                             Grid.Column="0"
+                            Grid.Row="0"
                             Text="Allowance"
                             FontSize="20"
-                            FontWeight="Thin"
-                            VerticalAlignment="Center"
-                            Margin="20,0,0,0"/>
+                            FontWeight="Thin"/>
+                        
                         <StackPanel
-                            Grid.Column="1">
-                            <CommandBar 
-                                Background="Transparent" 
-                                DefaultLabelPosition="Right" 
-                                HorizontalAlignment="Right">
-                                <AppBarButton 
-                                    Icon="Edit" 
-                                    Label="Update"
-                                    Click="AppBarButton_Click">
-                                </AppBarButton>
-                            </CommandBar>
-                        </StackPanel>
-                    </Grid>
-                    <Grid
-                        Margin="20,0,0,0"
-                        Padding="0,0,0,20">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="20*"/>
-                            <ColumnDefinition Width="20*"/>
-                            <ColumnDefinition Width="15*"/>
-                        </Grid.ColumnDefinitions>
-                        <StackPanel
+                            Grid.Row="1"
                             Grid.Column="0">
                             <TextBlock
                                 Text="Monthly"
@@ -136,11 +132,12 @@
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="0.00"
-                                FontSize="45"
-                                FontWeight="SemiBold"/>
+                                Text="{x:Bind Path=formattedAllowance}"
+                                FontSize="35"
+                                FontWeight="SemiLight"/>
                         </StackPanel>
                         <StackPanel
+                            Grid.Row="1"
                             Grid.Column="1">
                             <TextBlock
                                 Text="Annual"
@@ -148,11 +145,12 @@
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="0.00"
-                                FontSize="40"
-                                FontWeight="SemiBold"/>
+                                Text="{x:Bind Path=formattedAnnualAllowance}"
+                                FontSize="30"
+                                FontWeight="SemiLight"/>
                         </StackPanel>
                         <StackPanel
+                            Grid.Row="1"
                             Grid.Column="2">
                             <TextBlock
                                 Text="Daily"
@@ -160,9 +158,9 @@
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="0.00"
-                                FontSize="35"
-                                FontWeight="SemiBold"/>
+                                Text="{x:Bind Path=formattedDailyAllowance}"
+                                FontSize="25"
+                                FontWeight="SemiLight"/>
                         </StackPanel>
                     </Grid>
 

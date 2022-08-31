@@ -1,18 +1,8 @@
 ﻿using Badyet.App.ControlPages;
+using Badyet.App.Models;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 
 namespace Badyet.App.Pages
 {
@@ -22,6 +12,31 @@ namespace Badyet.App.Pages
         {
             InitializeComponent();
         }
+
+        static readonly Income sampleIncome = new()
+        {
+            Type = "Employment",
+            Name = "Optum",
+            BasicPay = 18_000m,
+            Allowance = 3_600m,
+        };
+        readonly string formattedBasicPay = $"{sampleIncome.BasicPay:C}";
+        readonly string formattedAllowance = $"{sampleIncome.Allowance:C}";
+        readonly string incomeType = sampleIncome.Type;
+        readonly string incomeName = sampleIncome.Name;
+
+        static readonly decimal dailyPay = sampleIncome.BasicPay / 30;
+        static readonly decimal annualPay = sampleIncome.BasicPay * 12;
+
+        readonly string formattedDailyPay = $"{dailyPay:C}";
+        readonly string formattedAnnualPay = $"{annualPay:C}";
+
+        static readonly decimal dailyAllowance = sampleIncome.Allowance / 30;
+        static readonly decimal annualAllowance = sampleIncome.Allowance * 12;
+
+        readonly string formattedDailyAllowance = $"{dailyAllowance:C}";
+        readonly string formattedAnnualAllowance = $"{annualAllowance:C}";
+
 
         private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
