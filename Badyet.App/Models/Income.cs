@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Badyet.App.Models
+﻿namespace Badyet.App.Models
 {
     public class Income
     {

@@ -42,7 +42,6 @@ namespace Badyet.App.Pages
         {
             ContentDialog dialog = new ContentDialog();
 
-            // XamlRoot must be set in the case of a ContentDialog running in a Desktop app
             dialog.XamlRoot = this.XamlRoot;
             dialog.Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style;
             dialog.Title = "Update basic pay?";
