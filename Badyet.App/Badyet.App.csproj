@@ -12,6 +12,7 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Components\PayoutPage.xaml" />
     <None Remove="Pages\ExpensesPage.xaml" />
     <None Remove="Pages\IncomePage.xaml" />
     <None Remove="Pages\MainPage.xaml" />
@@ -68,6 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="ControlPages\UpdateContentDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Components\PayoutPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
