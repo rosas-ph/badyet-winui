@@ -19,8 +19,7 @@
             IsBackButtonVisible="Collapsed">
             <NavigationView.MenuItems>
                 <NavigationViewItemHeader 
-                    Content="Badyet">
-                </NavigationViewItemHeader>
+                    Content="Badyet"/>
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame"/>
         </NavigationView>

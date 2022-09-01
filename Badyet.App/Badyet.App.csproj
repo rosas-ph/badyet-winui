@@ -12,6 +12,7 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="ControlPages\PayPage.xaml" />
     <None Remove="ControlPages\UpdateContentDialog.xaml" />
     <None Remove="Pages\ExpensesPage.xaml" />
     <None Remove="Pages\IncomePage.xaml" />
@@ -41,6 +42,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="ControlPages\PayPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\ExpensesPage.xaml">
