@@ -2,7 +2,7 @@
     x:Class="Badyet.App.Pages.IncomePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Badyet.App.ControlPages"
+    xmlns:local="using:Badyet.App"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -32,8 +32,7 @@
                             DefaultLabelPosition="Right">
                             <AppBarButton 
                                 Icon="Edit" 
-                                Label="Update"
-                                Click="AppBarButton_Click">
+                                Label="Update">
                             </AppBarButton>
                         </CommandBar>
                     </StackPanel>
@@ -177,7 +176,7 @@
             </Border>
         </Grid>
 
-        <local:PayPage
-            Margin="20,10"/>
+        <!--<local:PayoutPage
+            Margin="20,10"/>-->
     </StackPanel>
 </Page>
