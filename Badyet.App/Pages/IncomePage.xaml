@@ -87,12 +87,12 @@
                             Grid.Column="1"
                             Grid.Row="1">
                             <TextBlock
-                                Text="Annual"
+                                Text="Daily"
                                 FontSize="15"
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="{x:Bind Path=formattedAnnualPay}"
+                                Text="{x:Bind Path=formattedDailyPay}"
                                 FontSize="30"
                                 FontWeight="SemiLight"/>
                         </StackPanel>
@@ -100,13 +100,13 @@
                             Grid.Column="2"
                             Grid.Row="1">
                             <TextBlock
-                                Text="Daily"
+                                Text="Annual"
                                 FontSize="15"
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="{x:Bind Path=formattedDailyPay}"
-                                FontSize="25"
+                                Text="{x:Bind Path=formattedAnnualPay}"
+                                FontSize="30"
                                 FontWeight="SemiLight"/>
                         </StackPanel>
                     </Grid>
@@ -149,12 +149,12 @@
                             Grid.Row="1"
                             Grid.Column="1">
                             <TextBlock
-                                Text="Annual"
+                                Text="Daily"
                                 FontSize="15"
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="{x:Bind Path=formattedAnnualAllowance}"
+                                Text="{x:Bind Path=formattedDailyAllowance}"
                                 FontSize="30"
                                 FontWeight="SemiLight"/>
                         </StackPanel>
@@ -162,13 +162,13 @@
                             Grid.Row="1"
                             Grid.Column="2">
                             <TextBlock
-                                Text="Daily"
+                                Text="Annual"
                                 FontSize="15"
                                 FontStyle="Italic"
                                 FontWeight="Thin"/>
                             <TextBlock
-                                Text="{x:Bind Path=formattedDailyAllowance}"
-                                FontSize="25"
+                                Text="{x:Bind Path=formattedAnnualAllowance}"
+                                FontSize="30"
                                 FontWeight="SemiLight"/>
                         </StackPanel>
                     </Grid>
