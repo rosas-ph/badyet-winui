@@ -1,7 +1,9 @@
 ﻿using Badyet.App.Models;
+using Badyet.App.Components;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using System;
+using System.Threading.Tasks;
 
 namespace Badyet.App.Pages
 {
@@ -16,8 +18,8 @@ namespace Badyet.App.Pages
         {
             Type = "Employment",
             Name = "Optum",
-            BasicPay = 18_000m,
-            Allowance = 3_600m,
+            BasicPay = 18_000M,
+            Allowance = 3_600M,
         };
 
         private readonly string formattedBasicPay = $"{sampleIncome.BasicPay:C}";
@@ -36,5 +38,24 @@ namespace Badyet.App.Pages
 
         private readonly string formattedDailyAllowance = $"{dailyAllowance:C}";
         private readonly string formattedAnnualAllowance = $"{annualAllowance:C}";
+
+        private async void UpdateIncome_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dialog = new()
+            {
+                // XamlRoot must be set in the case of a ContentDialog running in a Desktop app
+                XamlRoot = this.XamlRoot,
+                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+                Title = "Update income",
+                PrimaryButtonText = "Save",
+                SecondaryButtonText = "Don't Save",
+                CloseButtonText = "Cancel",
+                DefaultButton = ContentDialogButton.Primary,
+                Content = new UpdateIncomeContentDialog()
+            };
+
+            var result = await dialog.ShowAsync();
+
+        }
     }
 }

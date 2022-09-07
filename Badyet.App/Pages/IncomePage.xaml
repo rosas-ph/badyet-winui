@@ -32,7 +32,8 @@
                             DefaultLabelPosition="Right">
                             <AppBarButton 
                                 Icon="Edit" 
-                                Label="Update">
+                                Label="Update"
+                                Click="UpdateIncome_Click">
                             </AppBarButton>
                         </CommandBar>
                     </StackPanel>
@@ -176,7 +177,7 @@
             </Border>
         </Grid>
 
-        <local:PayoutPage
-            Margin="20,10"/>
+        <!--<local:PayoutPage
+            Margin="20,10"/>-->
     </StackPanel>
 </Page>

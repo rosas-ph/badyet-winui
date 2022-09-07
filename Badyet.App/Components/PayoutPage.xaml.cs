@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml.Controls;
+﻿using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using System;
 
 namespace Badyet.App.Components
 { 
@@ -8,6 +10,5 @@ namespace Badyet.App.Components
         {
             InitializeComponent();
         }
-
     }
 }

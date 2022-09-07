@@ -19,10 +19,6 @@
             Grid.Row="0" 
             VerticalAlignment="Top"
             Height="25">
-            <!--<Image 
-                Source="/Assets/SmallTile.scale-100.png"
-                Height="28"
-                HorizontalAlignment="Left"/>-->
         </Border>
         <local:MainPage
             Grid.Row="1"/>
